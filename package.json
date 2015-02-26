@@ -1,6 +1,7 @@
 {
-  "name": "alexchumbley",
+  "name": "website",
   "description": "Personal Website",
+  "private": "true",
 
   "repository": {
     "type": "git",
@@ -30,8 +31,7 @@
     "mongoose": "*",
     "async": "*",
     "connect-busboy" : "*",
-    "node-schedule" : "*",
-    "yahoo-finance": "*"
+    "node-schedule" : "*"
   },
 
   "main": "server.js"
