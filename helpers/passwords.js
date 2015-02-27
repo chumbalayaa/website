@@ -1,5 +1,9 @@
 var passwords = {
-	getPostPassword : function() {
+	getAdminUsername : function() {
+		return "chums";
+	},
+
+	getAdminPassword : function() {
 		return "thisismywebsite";
 	},
 

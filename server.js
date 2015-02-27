@@ -8,14 +8,14 @@ var errorhandler = require("errorhandler");
 var session = require('express-session');
 var favicon = require("serve-favicon");
 var logger = require("morgan");
-var fs = require("fs");
-var busboy = require('connect-busboy');
 var passwords = require('./helpers/passwords');
 
+//model variables
 Article = require('./models/Article').Article;
 
 //routing variables
 var index = require('./routes/index');
+var admin = require('./routes/admin');
 
 //Add variables to app
 //app.set('view engine', 'jade');
@@ -55,32 +55,12 @@ app.use(function(req,res,next) {
   next();
 })
 
-
-//Authenticate that user is logged (has session)
-function authenticateUser(req, res, next) {
-  if (req.session.user) {
-    if (req.session.user.username == req.params.username) {
-      next();
-    } else {
-      console.log("Wrong user");
-      res.status(403).json({status: "Error",
-                            message: "Wrong User"}).end();
-    }
-  } else {
-    console.log("Not authenticated yet");
-    req.session.error = 'Access denied!';
-    res.status(400).json({status: "Error",
-                          message: "Not logged in"}).end();
-  }
-}
+//Authenticate that user is me
+var auth = express.basicAuth(passwords.getAdminUsername(), passwords.getAdminPassword());
 
 //Routing
 app.use('/', index);
-//app.use('/portfolio', portfolio);
-//app.use('/stock', stock);
-//app.use('/users', users);
-//app.use('/league', league);
-//app.use('/league/', match);
+app.user('/admin', auth, admin);
 
 // development error handler
 // will print stacktrace
