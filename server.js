@@ -24,7 +24,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(busboy()); 
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Session code
@@ -56,11 +55,27 @@ app.use(function(req,res,next) {
 })
 
 //Authenticate that user is me
-var auth = express.basicAuth(passwords.getAdminUsername(), passwords.getAdminPassword());
+var basicAuth = require('basic-auth');
+
+var auth = function (req, res, next) {
+  function unauthorized(res) {
+    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    return res.sendStatus(401);
+  };
+  var user = basicAuth(req);
+  if (!user || !user.name || !user.pass) {
+    return unauthorized(res);
+  };
+  if (user.name === passwords.getAdminUsername() && user.pass === passwords.getAdminPassword()) {
+    return next();
+  } else {
+    return unauthorized(res);
+  };
+};
 
 //Routing
 app.use('/', index);
-app.user('/admin', auth, admin);
+app.use('/admin', auth, admin);
 
 // development error handler
 // will print stacktrace

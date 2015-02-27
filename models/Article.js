@@ -37,10 +37,11 @@ articleSchema.pre('save', function(next){
 
 articleSchema.methods = {
   set: function(data, cb) {
-  	this = helpers.mapJSON(this, data, function() {
-  		this.save(cb);
+    var that = this;
+  	that = helpers.mapJSON(this, data, function() {
+  		that.save(cb);
   	});
-  },
+  }
 };
 
 articleSchema.statics = {
