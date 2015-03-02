@@ -1,3 +1,7 @@
+.body {
+	background: url("../images/texturetastic_gray.png") 50% 0 no-repeat fixedo !;
+}
+
 #mainBackground {
 	background: url("../images/swissBg.jpg") 50% 0 no-repeat fixed;
 	min-height: 200px;

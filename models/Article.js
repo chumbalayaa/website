@@ -12,11 +12,9 @@ var articleSchema = mongoose.Schema({
     required: true
   },
   topic: {
-  	
-  },
-  views: {
-  	type: Number,
-  	default: 0
+  	type: String,
+    required: true,
+    default: "General"
   },
   created_at: { 
   	type: Date 
@@ -35,14 +33,14 @@ articleSchema.pre('save', function(next){
   next();
 });
 
-articleSchema.methods = {
-  set: function(data, cb) {
-    var that = this;
-  	that = helpers.mapJSON(this, data, function() {
-  		that.save(cb);
-  	});
-  }
-};
+//articleSchema.methods = {
+//  set: function(data, cb) {
+//    var that = this;
+//  	that = helpers.mapJSON(this, data, function() {
+//  		that.save(cb);
+//  	});
+//  }
+//};
 
 articleSchema.statics = {
   

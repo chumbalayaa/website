@@ -31,7 +31,8 @@
     "mongoose": "*",
     "async": "*",
     "connect-busboy" : "*",
-    "node-schedule" : "*"
+    "node-schedule" : "*",
+    "basic-auth" : "*"
   },
 
   "main": "server.js"
