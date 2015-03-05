@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//Parallax Code
 	var $window = $(window); //You forgot this line in the above example
 	$('div[data-type="background"]').each(function(){
 		var $bgobj = $(this); // assigning the object
@@ -10,4 +11,6 @@ $(document).ready(function(){
 			$bgobj.css({ backgroundPosition: coords });
 		});
 	});
+
+	
 });

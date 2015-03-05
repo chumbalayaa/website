@@ -21,6 +21,10 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -60,34 +64,104 @@
             <div class="col-sm-6 col-sm-offset-3">
               <div class="well text-center">
                 <h1>Alex Chumbley</h1> 
-              </div>
+          <a class="navbar-brand" href="/">Alex Chumbley</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/articles/mostRecent">Blog</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Other <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Resume</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.mit.edu/~chumbley">MIT personal site</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
             </div>
-            <div class="columns sixteen">  
-              <h3>Hiya</h3>     
-            </div><!--/ columns--> 
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="band" >
+          <div class="container" id="mainBackground" data-type="background" data-speed="10" class="parallax">
+            <div class="row row-body">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-1" id="title">
+                  <div class="well text-center">
+                   <h1>Alex Chumbley</h1> 
+                   <p>Insert witty slogan here</p>
+                  </div> 
+                </div>
+              </div>
+             <div class="row">
+                <div class="span 9" id="subtitle1">  
+                  <div class="well text-center">
+                    <p id="introText">My name is Alex Chumbley. I am a senior CS major at MIT. You can find my mit hosted website 
+                      <a href="www.mit.edu/~chumbley">here</a> (why not take advantage of a .mit website?)</p>     
+                  </div>
+               </div><!--/ columns--> 
+              </div>
+              <div class="row">
+                <div class="span 9" id="subtitle2">  
+                  <div class="well text-center">
+                    <p>This is a place where I can put links to any projects I do. It's a place where potential employers can see who
+                      I am and what I like to do. And it's a place where I can write about things that interest me.</p>     
+                  </div>
+                </div><!--/ columns-->
+             </div>
+            </div>
           </div><!--/ container-->       
         </div><!--/ band-->
-        <div class="band main">
-          <div class="container">
-            <div class="columns twelve offset-by-two">            
-            </div><!--/ column-->
-          </div><!--/ container-->
-        </div><!--/ main-->
-        <div class="band main">
-          <div class="container">
-          <hr>
-            <div class="columns six offset-by-two">   
-            </div><!--/ column-->
-            <div class="columns six">
-            </div><!--/ column-->
-          </div><!--/ container-->
+    </div>
+    <div class="container">
+      <div class="band main">
+        <div class="container bottom-container" id="secondaryBackground" data-type="background" data-speed="10" class="parallax">
+          <div class="span 9" id="subtitle2">  
+            <div class="well text-center">
+              <h4>I love solving problems with people. There's nothing I like doing more than getting in a room with people
+              and working together, bouncing ideas around, and getting to the best answer.</h4>   
+            </div>
+          </div><!--/ columns-->
+          <div class="span 9" id="subtitle2">  
+            <div class="well text-center">
+              <h4>I've played football al my life (recently retired, decided not to go NFL). I grew up in a musical household, both 
+              parents classical pianists, so I have a deep appreciation there. I currently live in Boston, go to the school at MIT, 
+              all the while trying to deflect questions about the struggling Atlanta Falcons.</h4>    
+            </div>
+          </div><!--/ columns-->
+          <div class="span 9" id="subtitle2">  
+            <div class="well text-center">
+              <h4>This summer, I'll be working at AB-InBev, in their Global Management Training (GMT) internship. Huge beer fan, so this is a big win.</h4> 
+            </div>
+          </div><!--/ columns--> 
+        </div><!--/ container-->
+      </div><!--/ container-->
+      <div class="band main">
+        <div class="container bottom-container">
+        
+        </div><!--/ container-->
+      </div><!--/ main-->
+    </div><!--/ container-->
+    <div class="band main" style="padding-top:20px;">
+        <div class="container bottom-container">
+          <h3>Contact Information</h3>
         </div><!--/ main-->
         <footer class="band main">
-        <hr>
+          <hr>
           <div class="container">
-            <div class="columns eight">       
+            <div class="columns eight">   
+              <p>Email Address: <a href="mailto:chumbley@mit.edu">chumbley@mit.edu</a></p>  
             </div><!--/ column-->
             <div class="columns eight last">
+              <p>Phone Number: 404-201-0690</p>
             </div><!--/ column-->
           </div><!--/ container-->
         </footer><!--/ main-->

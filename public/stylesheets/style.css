@@ -1,13 +1,84 @@
-.body {
+
+/*body {
 	background: url("../images/texturetastic_gray.png") 50% 0 no-repeat fixedo !;
+}*/
+
+body {
+	background: url("../images/mooning.png");
+}
+
+.navbar {
+	margin-bottom: 0px;
 }
 
 #mainBackground {
 	background: url("../images/swissBg.jpg") 50% 0 no-repeat fixed;
 	min-height: 200px;
-	height: 600px; 
+	height: 700px; 
   	margin: 0 auto; 
   	width: 100%; 
-  	max-width: 1920px; 
+  	max-width: 2500px; 
   	position: relative; 
+}
+
+#title {
+	position: absolute;
+	margin-top: 75px;
+	float: left;
+	margin-right: 100%;
+	display: block;
+}
+
+.row {
+	float: none;
+	display: table-cell;
+}
+
+.row-body {
+	display: table;
+}
+
+#subtitle1 {
+	float: left;
+	margin-left: 10%;
+	width: 80%;
+	position: relative;
+	display: block;
+	margin-top: 75%;
+}
+
+#subtitle2 {
+	float: middle;
+	margin-left: 10%;
+	width: 80%;
+	position: relative;
+	margin-top: 40px;
+	display: block;
+}
+
+#secondaryBackground {
+	background: url("../images/mykonos.jpg") 50% 0 no-repeat fixed;
+	min-height: 200px;
+	height: 800px; 
+  	margin: 0 auto; 
+  	width: 100%; 
+  	max-width: 2500px; 
+  	position: relative; 
+}
+
+#titleText {
+	font-size: 12px;
+}
+
+.bottom-text {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.bottom-container {
+	width: 80%;
+}
+
+#formPost {
+	padding-top: 200px;
 }
