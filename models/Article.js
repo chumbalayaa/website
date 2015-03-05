@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var helpers = require('../helpers/helpers');
 
-var articleSchema = mongoose.Schema({
-  name: {
+var articleSchema = new Schema({
+  title: {
     type: String,
     required: true,
     unique: true
@@ -12,11 +13,13 @@ var articleSchema = mongoose.Schema({
     required: true
   },
   topic: {
-  	
+  	type: String,
+    required: true,
+    default: "General"
   },
-  views: {
-  	type: Number,
-  	default: 0
+  text: {
+    type: String,
+    required: true
   },
   created_at: { 
   	type: Date 
@@ -35,18 +38,38 @@ articleSchema.pre('save', function(next){
   next();
 });
 
-articleSchema.methods = {
-  set: function(data, cb) {
-    var that = this;
-  	that = helpers.mapJSON(this, data, function() {
-  		that.save(cb);
-  	});
+//articleSchema.methods = {
+//  set: function(data, cb) {
+//    var that = this;
+//  	that = helpers.mapJSON(this, data, function() {
+//  		that.save(cb);
+//  	});
+//  }
+//};
+
+articleSchema.statics = {
+  getArticleStubs: function(aricles, cb) {
+    data = {};
+    if (typeof articles == "")
+    for (article in articles) {
+      data[article._id] = {
+        "title": article.title,
+        "slogan": article.slogan,
+        "created_at": article.created_at
+      };
+    }
+    cb(data);
+  },
+
+  getArticleStub: function(article, cb) {
+    data = {};
+    data[article._id] = {
+      "title": article.title,
+      "slogan": article.slogan,
+      "created_at": article.created_at
+    };
+    cb(data);
   }
 };
 
-articleSchema.statics = {
-  
-}
-module.exports = {
-  Article: mongoose.model('Article', articleSchema)
-};
+module.exports = mongoose.model('Article', articleSchema);
