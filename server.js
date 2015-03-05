@@ -16,6 +16,7 @@ Article = require('./models/Article').Article;
 //routing variables
 var index = require('./routes/index');
 var admin = require('./routes/admin');
+var articles = require('./routes/articles');
 
 //Add variables to app
 //app.set('view engine', 'jade');
@@ -75,6 +76,7 @@ var auth = function (req, res, next) {
 
 //Routing
 app.use('/', index);
+app.use('/', articles);
 app.use('/admin', auth, admin);
 
 // development error handler
