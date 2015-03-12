@@ -8,12 +8,12 @@ router.get('/', function(req, res) {
 
 /* GET Resume Page. */
 router.get('/resume', function(req, res) {
-	res.send("Not done yet");
+	res.render('resume.ejs', {});
 });
 
 /*  GET Projects Page  */
 router.get('/projects', function(req, res) {
-	res.send("Not done yet");
+	res.render('projects.ejs', {});
 });
 
 module.exports = router;

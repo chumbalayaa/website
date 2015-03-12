@@ -5,6 +5,7 @@
 
 body {
 	background: url("../images/mooning.png");
+	padding-top: 70px;
 }
 
 .navbar {
@@ -30,7 +31,6 @@ body {
 }
 
 .row {
-	float: none;
 	display: table-cell;
 }
 
@@ -81,4 +81,16 @@ body {
 
 #formPost {
 	padding-top: 200px;
+}
+
+#articleTitle {
+	font-size: 24px;
+}
+
+#articleSlogan {
+
+}
+
+#articleTimestamp {
+
 }
