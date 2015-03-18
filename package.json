@@ -32,7 +32,8 @@
     "async": "*",
     "connect-busboy" : "*",
     "node-schedule" : "*",
-    "basic-auth" : "*"
+    "basic-auth" : "*",
+    "hexo-cli": "*"
   },
 
   "main": "server.js"
